@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Skrollr Example</title>
+  <style>
+   .background {
+    display: block;
+    background: url("img/background3.png") repeat-x;
+    width: 4000px;
+    height: 600px;
+    top: 0px;
+    position: absolute;
+    z-index: -100;
+   }
+   .grass {
+    display: block;
+    background: url("img/grass.png") repeat-x;
+    width: 4000px;
+    height: 350px;
+    top: 250px;
+    position: absolute;
+    z-index: 1000;
+   }
+   .scene {
+    display: block;
+    position: fixed;
+    height: 600px;
+    width: 800px;
+    overflow: hidden;
+    left: 25%;
+    border: solid black 2px;
+   }
+  </style>
+ </head>
+ <body data-twttr-rendered="true">
+  <div class="scene">
+   <div class="grass" data-0="left: 0px;" data-900="left: -1000px;" data-1800="left: -2000px;"></div>
+   <div class="background" data-0="left: 0px;" data-2000="left: -500px;"></div>
+  </div>
+  <script src="js/skrollr.js" type="text/javascript" ></script>
+  <script type="text/javascript">
+   var s = skrollr.init();
+   s.animateTo(2000,{duration: 5000});
+  </script>
+ </body>
+</html>
